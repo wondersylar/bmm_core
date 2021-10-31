@@ -1,0 +1,54 @@
+bmm:
+  define: [
+    +define+ISA_TEST_ONE_RAM,
+  ]
+  incdirs: [
+#    rtl/include,
+  ]
+  files: [
+#    tb_bmm.sv             ,
+    rtl/bmm_pkg.sv        ,
+    rtl/bmm.sv            ,
+    rtl/instr_decode.sv   ,
+    rtl/instr_fetch.sv    ,
+    rtl/pre_decode.sv     ,
+    rtl/ras.sv            ,
+    rtl/sp_ram.sv         ,
+#    rtl/ram_selfdef.sv    ,
+    rtl/instr_issue_1.sv    ,
+    #rtl/instr_issue.sv    ,
+    rtl/register_file.sv  ,
+    rtl/commit.sv         ,
+    rtl/ex.sv               ,
+    rtl/branch_unit.sv      ,
+    #rtl/load_store.sv      ,
+    rtl/load_store_1.sv     ,     #Support for non-aligned reads and writes
+    rtl/alu.sv              ,
+    rtl/csr_ctrl.sv         ,
+    rtl/csrfile_and_controller.sv,
+    rtl/csr_file.sv         ,
+    rtl/mul_div.sv          ,
+    rtl/mul.sv              ,
+    rtl/div.sv              ,
+    rtl/lzc.sv              ,
+    rtl/riscv_crypto_fu_ssm3.sv,
+    rtl/riscv_crypto_fu_ssm4.sv,
+    rtl/riscv_crypto_fu_sboxes.sv,
+  ]
+  filepak: [
+      #../../design/ips/udma_uart/udma_uart.yml,
+  ]
+  bblist: [
+#      aa,
+  ]
+  target:
+    vrf: 
+      vrf_files: [
+      ]
+      vrf_filepak: [
+      ]
+    syn: 
+      syn_files: [
+      ]
+      syn_filepak: [
+      ]

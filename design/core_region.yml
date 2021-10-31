@@ -1,0 +1,56 @@
+core_region:
+  define: [
+    +define+ISA_TEST_ONE_RAM,
+  ]
+  incdirs: [
+    rtl/axi_port,
+  ]
+  files: [
+    tb_core_region.sv                                       ,  
+    rtl/axi_port/axi_mem_if_SP_wrap.sv                              ,
+    rtl/axi_port/axi_slice_wrap.sv                                  ,
+    rtl/axi_port/core2axi_wrap.sv                                   ,
+    rtl/axi_port/core_region.sv                                     ,
+    rtl/axi_port/instr_ram_wrap.sv                                  ,
+    rtl/axi_port/boot_rom_wrap.sv                                  ,
+    rtl/axi_port/boot_code.sv                                       ,
+    rtl/axi_port/ram_mux.sv                                         ,
+    rtl/axi_port/sp_ram_wrap.sv                                     ,
+    ips/axi_mem_if_DP/axi_mem_if_MP_Hybrid_multi_bank.sv    ,
+    ips/axi_mem_if_DP/axi_mem_if_multi_bank.sv              ,
+    ips/axi_mem_if_DP/axi_mem_if_DP_hybr.sv                 ,
+    ips/axi_mem_if_DP/axi_mem_if_DP.sv                      ,
+    ips/axi_mem_if_DP/axi_mem_if_SP.sv                      ,
+    ips/axi_mem_if_DP/axi_read_only_ctrl.sv                 ,
+    ips/axi_mem_if_DP/axi_write_only_ctrl.sv                ,
+    ips/axi_slice/axi_ar_buffer.sv                          ,
+    ips/axi_slice/axi_aw_buffer.sv                          ,
+    ips/axi_slice/axi_b_buffer.sv                           ,
+    ips/axi_slice/axi_buffer.sv                             ,
+    ips/axi_slice/axi_r_buffer.sv                           ,
+    ips/axi_slice/axi_slice.sv                              ,
+    ips/axi_slice/axi_w_buffer.sv                           ,
+    ips/axi_slice_dc/axi_slice_dc_master.sv                 ,
+    ips/axi_slice_dc/axi_slice_dc_slave.sv                  ,
+    ips/core2axi/core2axi.sv                                ,
+    lib/deprecated/generic_fifo.sv                          ,
+    lib/cluster_clock_gating.sv                   ,
+  ]
+  filepak: [
+    bmm.yml                     ,
+    ips/axi_xbar/axi_node.yml   ,
+  ]
+  bblist: [
+#      aa,
+  ]
+  target:
+    vrf: 
+      vrf_files: [
+      ]
+      vrf_filepak: [
+      ]
+    syn: 
+      syn_files: [
+      ]
+      syn_filepak: [
+      ]
