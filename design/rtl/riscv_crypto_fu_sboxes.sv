@@ -1,3 +1,12 @@
+//    sboxes.v
+//    2020-01-29    Markku-Juhani O. Saarinen <mjos@pqshield.com>
+//    Copyright (c) 2020, PQShield Ltd. All rights reserved.
+
+/*
+
+    Non-hardened combinatorial logic for AES, inverse AES, and SM4 S-Boxes.
+
+    Each S-Box has a nonlinear middle layer sandwitched between linear
     top and bottom layers. In this version the top ("inner") layer expands
     8 bits to 21 bits while the bottom layer compresses 18 bits back to 8.
 

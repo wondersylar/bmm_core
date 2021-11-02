@@ -1,4 +1,13 @@
 
+module sp_ram
+  #(
+    parameter ADDR_WIDTH = 8,
+    parameter DATA_WIDTH = 32,
+    parameter NUM_BYTES  = 256
+  )(
+    // Clock and Reset
+    input  logic                    clk_i,
+
     input  logic                    en_i,
     input  logic [ADDR_WIDTH-1:0]   addr_i,
     input  logic [DATA_WIDTH-1:0]   wdata_i,

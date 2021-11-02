@@ -1,3 +1,12 @@
+
+import bmm_pkg::*;
+
+module bmm (
+    input    logic                          clk_i                   ,
+    input    logic                          rst_ni                  ,     
+    input    logic  [31:0]                  instr_boot_addr_i,
+    
+    input    logic                          soft_irq_i      ,
     input    logic                          timer_irq_i     ,
     input    logic                          ex_irq_i        ,
     //read instruction from iram            

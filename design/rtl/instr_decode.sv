@@ -1,4 +1,13 @@
 
+
+module instr_decode(
+    input    logic              clk_i           ,
+    input    logic              rst_ni          , 
+
+    input    logic              flush_id_i      ,     
+    output   exception_t        id_exception_o  ,
+    output   logic              id_mret_o       ,
+
     output   logic              instr_decode_rdy_o     ,
     input    logic              instr_vld_i     ,
     input    logic  [31:0]      instr_i         ,

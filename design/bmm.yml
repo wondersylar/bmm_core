@@ -6,7 +6,7 @@ bmm:
 #    rtl/include,
   ]
   files: [
-#    tb_bmm.sv             ,
+    #tb_bmm.sv             ,
     rtl/bmm_pkg.sv        ,
     rtl/bmm.sv            ,
     rtl/instr_decode.sv   ,
@@ -14,7 +14,7 @@ bmm:
     rtl/pre_decode.sv     ,
     rtl/ras.sv            ,
     rtl/sp_ram.sv         ,
-#    rtl/ram_selfdef.sv    ,
+    #rtl/ram_selfdef.sv    ,
     rtl/instr_issue_1.sv    ,
     #rtl/instr_issue.sv    ,
     rtl/register_file.sv  ,
@@ -36,7 +36,7 @@ bmm:
     rtl/riscv_crypto_fu_sboxes.sv,
   ]
   filepak: [
-      #../../design/ips/udma_uart/udma_uart.yml,
+      #xxx.yml,
   ]
   bblist: [
 #      aa,

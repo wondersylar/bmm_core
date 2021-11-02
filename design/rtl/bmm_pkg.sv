@@ -1,3 +1,12 @@
+   
+package bmm_pkg;  
+   
+    localparam      REG_ADDR_SIZE  = 5;
+    localparam      REG_DATA_WIDTH = 32;
+    localparam      ADDR_BITS      = 3;
+    localparam      NR_WB_PORTS    = 4;
+    localparam      MEM_DEPTH      = 8;
+    // --------------------
     // Privilege Spec
     // --------------------
     typedef enum logic[1:0] {

@@ -1,3 +1,12 @@
+
+
+
+module data_ram
+  #(
+    parameter ADDR_WIDTH = 8,
+    parameter DATA_WIDTH = 32,
+    parameter NUM_BYTES  = 256
+  )(
     // Clock and Reset
     input  logic                    clk_i,
     input  logic                    rst_ni,

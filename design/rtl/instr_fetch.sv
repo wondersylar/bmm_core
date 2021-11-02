@@ -1,3 +1,12 @@
+
+
+module instr_fetch (
+    input    logic              clk_i       ,
+    input    logic              rst_ni      ,     
+    input    logic   [31:0]     instr_boot_addr_i,
+    
+    //interrupt exception handle
+    input    logic              flush_if_i      ,  //interrupt exception    
     input    logic  [31:0]      fetch_addr_i    ,  //from mtvec   
     output   exception_t        if_exception_o  ,
     //from ex branch_unit

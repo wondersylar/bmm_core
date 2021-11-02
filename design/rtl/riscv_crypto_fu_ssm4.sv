@@ -1,3 +1,12 @@
+//----------------------------------------------------------------
+//Copyright (C) 2021 PCL(PengCheng Laboratory) All rights reserved.
+//FileName      sm4.sv
+//Author        SongXue, songx@pcl.ac.cn
+//Create        2021-06-16 09:44:44
+//Last Modified 2021-06-16 09:44:44
+//Discription   
+
+//----------------------------------------------------------------
 module riscv_crypto_fu_ssm4 (
 
 //input  wire         valid       , // Inputs valid?
