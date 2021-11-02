@@ -2,7 +2,7 @@
 
 
 
-# run this in "/home/songxue/pcl_mcu_20210423/pcl_mcu/tests/isa_csr_00_init/" dir
+# run this in "xx/tests/isa_csr_00_init/" dir
 import sys,os,re
 
 all_lines = []
@@ -17,7 +17,7 @@ def find_data_line(lst):
             #print("---data_i",data_i)
     return data_i
 
-for root, dirs, files in os.walk("/home/songxue/pcl_mcu_20210423/pcl_mcu/tests/isa_csr_00_init/", topdown=False):
+for root, dirs, files in os.walk("xxx/tests/isa_csr_00_init/", topdown=False):
     for fl in files :
         filename = os.path.splitext(fl)[0]
         all_lines = []

@@ -1,12 +1,4 @@
-//----------------------------------------------------------------
-//Copyright (C) 2021 PCL(PengCheng Laboratory) All rights reserved.
-//FileName      tb_core_region.sv
-//Author        SongXue, songx@pcl.ac.cn
-//Create        2021-07-13 15:21:45
-//Last Modified 2021-07-13 15:21:45
-//Discription   
 
-//----------------------------------------------------------------
 `timescale 1 ns / 1 ps
 module tb_core_region;
 

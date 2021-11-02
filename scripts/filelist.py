@@ -12,7 +12,7 @@ if len(sys.argv) == 3:
 else:
     run_target = ''
 
-PCL_MCU = os.environ['PCL_MCU']
+PROJ_PATH = os.environ['PROJ_PATH']
 
 def dedupe(items):
     seen = [] 
@@ -44,7 +44,7 @@ def read_yml(topsrc_fl, run_target):
     if 'incdirs' in topsrc_dict[topname].keys():
         for incds in topsrc_dict[topname]['incdirs']:
             abs_path = root_path + incds
-            env_path = re.sub(PCL_MCU,'$PCL_MCU/',abs_path)
+            env_path = re.sub(PROJ_PATH,'$PROJ_PATH/',abs_path)
             if os.path.exists(abs_path):
                 incd_lst.append('+incdir+'+ env_path)
             else:
@@ -59,7 +59,7 @@ def read_yml(topsrc_fl, run_target):
                 if k.endswith('_files'):
                     for fls in topsrc_dict[topname]['target'][run_target][k]:
                         abs_path = root_path + fls
-                        env_path = re.sub(PCL_MCU,'$PCL_MCU/',abs_path)
+                        env_path = re.sub(PROJ_PATH,'$PROJ_PATH/',abs_path)
                         if os.path.exists(abs_path):
                             sv_lst.append(env_path)
                         else:
@@ -73,7 +73,7 @@ def read_yml(topsrc_fl, run_target):
                         if os.path.exists(src_fl):
                             if module_name in bb_lst:
                                 bb_path = re.sub(module_name+'.yml', 'rtl/'+module_name+'_bb.sv',src_fl)
-                                env_bb_path = re.sub(PCL_MCU,'$PCL_MCU/',bb_path)
+                                env_bb_path = re.sub(PROJ_PATH,'$PROJ_PATH/',bb_path)
                                 sv_lst.append(env_bb_path)
                             else:
                                 incd_lst_tmp,sv_lst_tmp,define_lst_tmp = read_yml(src_fl,run_target)
@@ -89,7 +89,7 @@ def read_yml(topsrc_fl, run_target):
     if 'files' in topsrc_dict[topname].keys():
         for fls in topsrc_dict[topname]['files']:
             abs_path = root_path + fls
-            env_path = re.sub(PCL_MCU,'$PCL_MCU/',abs_path)
+            env_path = re.sub(PROJ_PATH,'$PROJ_PATH/',abs_path)
             module_name = os.path.basename(abs_path).split('.')[0]
             if os.path.exists(abs_path):
                 if module_name in bb_lst:
@@ -109,7 +109,7 @@ def read_yml(topsrc_fl, run_target):
             if os.path.exists(src_fl):
                 if module_name in bb_lst:
                     bb_path = re.sub(module_name+'.yml', 'rtl/'+module_name+'_bb.sv',src_fl)
-                    env_bb_path = re.sub(PCL_MCU,'$PCL_MCU/',bb_path)
+                    env_bb_path = re.sub(PROJ_PATH,'$PROJ_PATH/',bb_path)
                     sv_lst.append(env_bb_path)
                 else:
                     incd_lst_tmp,sv_lst_tmp,define_lst_tmp = read_yml(src_fl,run_target)
@@ -128,7 +128,7 @@ def print_dc(incd_lst,sv_lst,pkg_lst,filename):
     
     setup_file = open('dc_setup.setup','w')
     for i in dedupe(incd_lst):
-        path = re.sub('\$PCL_MCU/',PCL_MCU,i)
+        path = re.sub('\$PROJ_PATH/',PROJ_PATH,i)
         line = re.sub('\+incdir\+',"set search_path \"$search_path ",path)+"\""
         setup_file.write(line + '\n')
     setup_file.close()
@@ -136,7 +136,7 @@ def print_dc(incd_lst,sv_lst,pkg_lst,filename):
     fl_list = open('filelist.tcl','w')
     fl_list.write('set rtl_list { \\'+ '\n')
     for j in dedupe(pkg_lst + sv_lst):
-        path = re.sub('\$PCL_MCU/',PCL_MCU,j)
+        path = re.sub('\$PROJ_PATH/',PROJ_PATH,j)
         fl_list.write(path +' \\' +'\n')
     fl_list.write('}'+ '\n')
     fl_list.close()
