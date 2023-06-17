@@ -111,6 +111,7 @@ module div(
 
     assign a_sign = op1_i[31] & (op_i == DIV | op_i == REM );
     assign b_sign = op2_i[31] & (op_i == DIV | op_i == REM );
+    //if op_data is negative,find its source code
     assign op_a = (a_sign)? ~(op1_i - 1'b1) : op1_i;
     assign op_b = (b_sign)? ~(op2_i - 1'b1) : op2_i;
     
@@ -119,7 +120,7 @@ module div(
     assign div_by_zero = input_hsk & (~|op2_i) ;
     //divide by 1 or -1
     assign div_by_one  = input_hsk & (op_b == 32'b1);
-    //32bit signed number can not represent +128, -128~+127
+    //32bit signed number can not represent +2^31, -2^31 ~ +2^31-1
     assign overflow = input_hsk & (op1_i == 32'h8000_0000) & (op2_i == 32'hffff_ffff) & (op_i == DIV | op_i == REM );
 
 
@@ -140,7 +141,10 @@ module div(
             sign_quotient  = (op2_i == 32'b1)? op1_i : (~op1_i + 1'b1);
         end else if(a_sign_q ^ b_sign_q) begin
             sign_quotient  =  (~quotient + 1'b1) ;
-            sign_remainder =  (~remainder + 1'b1);
+            sign_remainder =  (a_sign_q)? (~remainder + 1'b1) : remainder ;
+        end else if(a_sign_q & b_sign_q) begin
+            sign_quotient  =  quotient;
+            sign_remainder =  (a_sign_q)? (~remainder + 1'b1) : remainder ;
         end else begin
             sign_quotient  =  quotient;
             sign_remainder =  remainder;

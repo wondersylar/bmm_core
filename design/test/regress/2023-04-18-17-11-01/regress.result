@@ -1,0 +1,52 @@
+2023-04-18-17-11-01
+
+rv32ui-p-add         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-add.hex TEST=isa
+rv32ui-p-addi        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-addi.hex TEST=isa
+rv32ui-p-and         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-and.hex TEST=isa
+rv32ui-p-andi        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-andi.hex TEST=isa
+rv32ui-p-auipc       :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-auipc.hex TEST=isa
+rv32ui-p-beq         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-beq.hex TEST=isa
+rv32ui-p-bge         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-bge.hex TEST=isa
+rv32ui-p-bgeu        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-bgeu.hex TEST=isa
+rv32ui-p-blt         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-blt.hex TEST=isa
+rv32ui-p-bltu        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-bltu.hex TEST=isa
+rv32ui-p-bne         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-bne.hex TEST=isa
+rv32ui-p-fence_i     :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-fence_i.hex TEST=isa
+rv32ui-p-jal         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-jal.hex TEST=isa
+rv32ui-p-jalr        : FAILED :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-jalr.hex TEST=isa
+rv32ui-p-lb          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lb.hex TEST=isa
+rv32ui-p-lbu         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lbu.hex TEST=isa
+rv32ui-p-lh          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lh.hex TEST=isa
+rv32ui-p-lhu         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lhu.hex TEST=isa
+rv32ui-p-lui         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lui.hex TEST=isa
+rv32ui-p-lw          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-lw.hex TEST=isa
+rv32ui-p-or          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-or.hex TEST=isa
+rv32ui-p-ori         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-ori.hex TEST=isa
+rv32ui-p-sb          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sb.hex TEST=isa
+rv32ui-p-sh          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sh.hex TEST=isa
+rv32ui-p-simple      :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-simple.hex TEST=isa
+rv32ui-p-sll         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sll.hex TEST=isa
+rv32ui-p-slli        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-slli.hex TEST=isa
+rv32ui-p-slt         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-slt.hex TEST=isa
+rv32ui-p-slti        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-slti.hex TEST=isa
+rv32ui-p-sltiu       :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sltiu.hex TEST=isa
+rv32ui-p-sltu        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sltu.hex TEST=isa
+rv32ui-p-sra         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sra.hex TEST=isa
+rv32ui-p-srai        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-srai.hex TEST=isa
+rv32ui-p-srl         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-srl.hex TEST=isa
+rv32ui-p-srli        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-srli.hex TEST=isa
+rv32ui-p-sub         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sub.hex TEST=isa
+rv32ui-p-sw          :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-sw.hex TEST=isa
+rv32ui-p-xor         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-xor.hex TEST=isa
+rv32ui-p-xori        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32ui-p-xori.hex TEST=isa
+rv32um-p-divu        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-divu.hex TEST=isa
+rv32um-p-div         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-div.hex TEST=isa
+rv32um-p-remu        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-remu.hex TEST=isa
+rv32um-p-rem         : FAILED :   make sim TESTCASE=../../sw/build/isa/rv32um-p-rem.hex TEST=isa
+rv32um-p-mulhsu      :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-mulhsu.hex TEST=isa
+rv32um-p-mulhu       :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-mulhu.hex TEST=isa
+rv32um-p-mulh        :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-mulh.hex TEST=isa
+rv32um-p-mul         :   PASS :   make sim TESTCASE=../../sw/build/isa/rv32um-p-mul.hex TEST=isa
+
+
+2023-04-18-17-11-45

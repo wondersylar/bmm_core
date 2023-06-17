@@ -1,0 +1,15 @@
+tags
+compile.log 
+csrc 
+simv 
+simv.daidir 
+ucli.key 
+vc_hdrs.h 
+novas_dump.log 
+*.fsdb 
+novas* 
+verdiLog
+signal.rc
+sim.log
+debug/
+stack.info.*
